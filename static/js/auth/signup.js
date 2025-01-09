@@ -131,9 +131,9 @@ function closeModal() {
 }
 
 // 버튼 이벤트 리스너
-//goToLoginBtn.addEventListener('click', () => {
-//    window.location.href = 'signin.html';
-//});
+goToLoginBtn.addEventListener('click', () => {
+    window.location.href = 'signin.html';
+});
 
 closeErrorBtn.addEventListener('click', closeModal);
 
@@ -171,7 +171,7 @@ document.getElementById('signupForm').addEventListener('submit', async function(
 
         if (response.status === 201) {
             localStorage.removeItem('emailData');
-            //showModal(true);
+            showModal(true);
         } else {
             // 백엔드에서 오는 에러 메시지 처리
             let errorMsg;
