@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./static/css/auth/signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h1 class="signup-title">계정 만들기</h1>
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="email" class="input-label">이메일</label>
+                <input type="email" id="email" class="input-field" required readonly>
+            </div>
+
+            <div class="input-group">
+                <label for="username" class="input-label">사용자 이름</label>
+                <input type="text" id="username" class="input-field" required placeholder="사용자 이름을 입력해주세요">
+            </div>
+
+            <div class="input-group">
+                <label for="password" class="input-label">비밀번호</label>
+                <input type="password" id="password" class="input-field" required placeholder="비밀번호를 입력해주세요">
+            </div>
+
+            <div class="input-group">
+                <label for="gender" class="input-label">성별</label>
+                <select id="gender" class="input-field" required>
+                    <option value="">성별 선택</option>
+                    <option value="남성">남성</option>
+                    <option value="여성">여성</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="phone" class="input-label">전화번호</label>
+                <input type="tel" id="phone" class="input-field" required placeholder="전화번호를 입력해주세요">
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">생년월일</label>
+                <div class="birthday-group" style="display: flex; gap: 10px;">
+                    <select id="birthYear" class="input-field" required>
+                        <option value="">연도</option>
+                    </select>
+                    <select id="birthMonth" class="input-field" required>
+                        <option value="">월</option>
+                    </select>
+                    <select id="birthDay" class="input-field" required>
+                        <option value="">일</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" id="signupButton" class="signup-button" disabled>계정 만들기</button>
+        </form>
+        <a href="signin.html" class="login-link">이미 계정이 있나요? 로그인</a>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <div id="successContent" style="display: none;">
+                <h2 style="color: #3ba55c; margin-bottom: 20px;">✅ 회원가입 완료</h2>
+                <p style="margin-bottom: 20px; color: #dcddde;">회원가입이 성공적으로 완료되었습니다.</p>
+                <button id="goToLoginBtn" class="modal-button success">로그인하러 가기</button>
+            </div>
+            <div id="errorContent" style="display: none;">
+                <h2 style="color: #ed4245; margin-bottom: 20px;">❌ 오류 발생</h2>
+                <p id="errorMessage" style="margin-bottom: 20px; color: #dcddde;"></p>
+                <button id="closeErrorBtn" class="modal-button error">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./static/js/auth/signup.js"></script>
+</body>
+</html>
