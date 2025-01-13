@@ -1,0 +1,367 @@
+/* 디엠 아이템 스타일 */
+.chat-list-container {
+flex: 1;
+overflow-y: auto;
+}
+
+.chat-list-header {
+padding: 16px 12px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: #96989d;
+font-size: 14px;
+}
+
+.dm-count {
+color: #72767d;
+font-size: 12px;
+}
+
+.chat-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-item {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 8px;
+}
+
+.chat-item:hover {
+    background-color: #36393f;
+}
+
+.chat-item.active {
+    background-color: #393c43;
+}
+
+.chat-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #5865f2;
+    position: relative;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #2f3136;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+}
+
+.status-indicator.online {
+    background-color: #3ba55c;
+}
+
+.status-indicator.offline {
+    background-color: #747f8d;
+}
+
+.chat-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.chat-name {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-preview {
+    color: #96989d;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.chat-time {
+    color: #96989d;
+    font-size: 11px;
+}
+
+.unread-count {
+    background-color: #f04747;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 스크롤바 스타일링 */
+.chat-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-list-container::-webkit-scrollbar-thumb {
+    background-color: #202225;
+    border-radius: 4px;
+}
+
+.chat-list-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* 메인 컨텐츠 영역 */
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 검색 헤더 */
+.search-header {
+    height: 48px;
+    background-color: #36393f;
+    border-bottom: 1px solid #202225;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 600px;
+    height: 32px;
+    background-color: #202225;
+    border: none;
+    border-radius: 4px;
+    padding: 0 12px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.search-bar::placeholder {
+    color: #72767d;
+}
+
+/* 친구 목록 메인 영역 */
+.friends-area {
+    flex: 1;
+    background-color: #36393f;
+    padding: 20px;
+}
+
+.friends-tabs {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #202225;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.add-friend {
+    margin-left: 8px;
+    padding: 8px 16px;
+    background-color: #2cce42;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.add-friend:hover {
+    background-color: #23a334;
+}
+
+.tab {
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #8e9297;
+}
+
+.tab.active {
+    background-color: #5865f2;
+    color: #ffffff;
+}
+
+.tab:hover:not(.active) {
+    background-color: #40444b;
+    color: #ffffff;
+}
+
+.friends-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.friend-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #2f3136;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.friend-item:hover {
+    background-color: #40444b;
+}
+
+.friend-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #5865f2;
+    margin-right: 12px;
+}
+
+.friend-info {
+    flex: 1;
+}
+
+.friend-name {
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.friend-status {
+    font-size: 12px;
+    color: #8e9297;
+}
+
+.friend-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.online-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3ba55c;
+    margin-right: 8px;
+}
+
+.offline-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #747f8d;
+    margin-right: 8px;
+}
+
+/* 친구 추가 모달 */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #8e9297;
+}
+
+.close:hover {
+    color: #ffffff;
+}
+
+.search-container {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+#friendSearchInput {
+    flex: 1;
+    padding: 8px 12px;
+    background-color: #40444b;
+    border: 1px solid #202225;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#friendSearchInput::placeholder {
+    color: #72767d;
+}
+
+#friendSearchButton {
+    padding: 8px 16px;
+    background-color: #5865f2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#friendSearchButton:hover {
+    background-color: #4752c4;
+}
+
+.search-results {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.search-result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #2f3136;
+    color: #ffffff;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.add-friend-btn {
+    padding: 6px 12px;
+    background-color: #2cce42;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-friend-btn:hover {
+    background-color: #23a334;
+}
+
+.add-friend-btn:disabled {
+    background-color: #4f545c;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: #ed4245;
+    text-align: center;
+    padding: 10px;
+}

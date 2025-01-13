@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Service - Home</title>
+    <link rel="stylesheet" href="./static/css/main/main.css">
+    <link rel="stylesheet" href="./static/css/sidebar/sidebar_dm.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 메인 네비게이션 -->
+        <div class="main-nav">
+            <div class="nav-icon active">🏠</div>
+            <div class="nav-icon">🔔</div>
+            <div class="server-separator"></div>
+            <!-- 그룹채팅방 목록 -->
+            <div class="server-list">
+                <div class="server-icon">
+                    👥
+                    <div class="server-badge">3</div>
+                </div>
+                <div class="server-icon">
+                    👥
+                    <div class="server-badge">15</div>
+                </div>
+                <div class="server-icon">
+                    👥
+                    <div class="server-badge">7</div>
+                </div>
+                <div class="server-icon add-server">+</div>
+            </div>
+        </div>
+
+        <!-- 사이드바 -->
+        <div class="friends-sidebar">
+            <div class="friends-header">
+                <div class="section-title">chat</div>
+            </div>
+            <!-- 채팅 목록 영역 추가 -->
+            <div class="chat-list-container">
+                <div class="chat-list-header">
+                    <span>다이렉트 메시지 <span class="dm-count">7</span></span>
+                </div>
+                <div class="chat-list"></div>
+            </div>
+
+             <!-- 프로필 섹션 -->
+             <div class="profile-section">
+                <div class="profile-avatar">
+                    <div class="profile-status"></div>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-name"></div>
+                    <div class="profile-tag">온라인</div>
+                </div>
+                <div class="profile-actions">
+                    <div class="profile-dropdown">
+                        <button class="profile-button">⚙️</button>
+                        <div class="profile-dropdown-content">
+                            <button class="profile-dropdown-item" id="editProfileButton">프로필 수정</button>
+                            <button class="profile-dropdown-item" id="logoutButton">로그아웃</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 메인 컨텐츠 영역 -->
+        <div class="content-area">
+            <!-- 검색 헤더 -->
+            <div class="search-header">
+                <input type="text" class="search-bar" placeholder="친구 검색하기...">
+            </div>
+
+            <!-- 친구 목록 메인 영역 -->
+            <div class="friends-area">
+                <div class="friends-tabs">
+                    <div class="tab active">전체</div>
+                    <div class="tab">온라인</div>
+                    <div class="tab">친구 요청 보낸 목록</div>
+                    <div class="tab">친구 요청 받은 목록</div>
+                    <button class="add-friend">친구 추가</button>
+                </div>
+
+                <!-- 친구 추가 모달 -->
+                <div id="addFriendModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>친구 추가</h2>
+                        <div class="search-container">
+                            <input type="text" id="friendSearchInput" placeholder="친구 이름을 입력하세요">
+                            <button id="friendSearchButton">검색</button>
+                        </div>
+                        <div id="searchResults" class="search-results">
+                            <!-- 검색 결과가 여기에 표시됩니다 -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 로그아웃 모달 -->
+                <div id="logoutModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" id="closeLogoutModal">&times;</span>
+                        <h2>로그아웃</h2>
+                        <h4>정말로 로그아웃하시겠어요?</h4>
+                        <button class="modal-button" id="confirmLogout">로그아웃</button>
+                    </div>
+                </div>
+
+                <div class="friends-list">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./static/js/main/main.js"></script>
+    <script src="./static/js/sidebar/sidebar_dm.js"></script>
+</body>
+</html>
