@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Service - Edit Profile</title>
+    <link rel="stylesheet" href="./static/css/profile/profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="edit-profile-card">
+            <div class="edit-profile-header">
+                <h2>프로필 수정</h2>
+            </div>
+            <form class="profile-form" id="profile-form">
+                <div class="avatar-section">
+                    <div class="avatar-preview">
+                        <img id="avatar-img" alt="프로필 이미지">
+                    </div>
+                    <div class="avatar-upload">
+                        <input type="file" id="file-input" accept="image/*">
+                        <button type="button" class="upload-button" onclick="document.getElementById('file-input').click()">
+                            이미지 업로드
+                        </button>
+                        <span style="color: #b9bbbe; font-size: 12px;">권장: 최소 80x80 PNG, JPEG</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" class="input-field" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">사용자 이름</label>
+                    <input type="text" id="username" class="input-field">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">휴대폰 번호</label>
+                    <input type="tel" id="phone" class="input-field">
+                </div>
+
+                <div class="form-group">
+                    <label>생년월일</label>
+                    <div class="birthday-group">
+                        <select id="birthYear" class="input-field">
+                            <option value="">연도</option>
+                        </select>
+                        <select id="birthMonth" class="input-field">
+                            <option value="">월</option>
+                        </select>
+                        <select id="birthDay" class="input-field">
+                            <option value="">일</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="password-section">
+                    <h3>비밀번호 변경</h3>
+                    <p style="color: #b9bbbe; margin-bottom: 16px;">계정 보안을 위해 정기적으로 비밀번호를 변경하는 것이 좋습니다.</p>
+                    <a href="change-password.html" class="change-password-button">비밀번호 변경</a>
+                </div>
+
+                <div class="delete-account-section">
+                    <h3>계정 탈퇴</h3>
+                    <p style="color: #b9bbbe; margin-bottom: 16px;">계정을 삭제하면 모든 데이터가 영구적으로 삭제되며 복구할 수 없습니다.</p>
+                    <button type="button" class="delete-account-button">계정 탈퇴</button>
+                </div>
+
+                <div class="action-buttons">
+                    <button type="button" class="cancel-button">취소</button>
+                    <button type="submit" class="save-button">변경사항 저장</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./static/js/profile/profile.js"></script>
+</body>
+</html>
