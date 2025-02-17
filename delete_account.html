@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Service - Delete Account</title>
+    <link rel="stylesheet" href="./static/css/profile/delete_account.css">
+</head>
+<body>
+    <div class="container">
+        <div class="delete-account-card">
+            <div class="delete-account-header">
+                <h2>계정 탈퇴</h2>
+            </div>
+            <div class="warning-message">
+                <h3>⚠️ 계정 탈퇴 전 꼭 확인해주세요</h3>
+                <ul>
+                    <li>계정을 삭제하면 모든 데이터가 영구적으로 삭제됩니다.</li>
+                    <li>삭제된 데이터는 복구할 수 없습니다.</li>
+                    <li>진행하시려면 계정 비밀번호를 입력해주세요.</li>
+                </ul>
+            </div>
+            <form class="delete-form" id="delete-form">
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" class="input-field" required>
+                    <div class="error-message" id="password-error" style="display: none;">
+                        비밀번호가 일치하지 않습니다.
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="profile.html" class="cancel-button">취소</a>
+                    <button type="submit" class="delete-button">계정 탈퇴</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 확인 모달 -->
+    <div class="modal" id="confirm-modal">
+        <div class="modal-content">
+            <h3>계정 탈퇴 확인</h3>
+            <p>정말 계정을 삭제하시겠습니까?<br>이 작업은 되돌릴 수 없습니다.</p>
+            <div class="modal-buttons">
+                <button class="cancel-button" onclick="closeModal()">취소</button>
+                <button class="delete-button" onclick="deleteAccount()">삭제</button>
+            </div>
+        </div>
+    </div>
+    <script src="./static/js/profile/delete_account.js"></script>
+</body>
+</html>

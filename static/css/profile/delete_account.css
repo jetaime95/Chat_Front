@@ -1,0 +1,169 @@
+/* 기존 스타일 재사용 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #36393f;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.delete-account-card {
+    background-color: #2f3136;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.delete-account-header {
+    margin-bottom: 24px;
+    border-bottom: 1px solid #40444b;
+    padding-bottom: 16px;
+}
+
+.delete-account-header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 경고 메시지 스타일 */
+.warning-message {
+    background-color: rgba(237, 66, 69, 0.1);
+    border: 1px solid #ed4245;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.warning-message h3 {
+    color: #ed4245;
+    margin: 0 0 12px 0;
+    font-size: 16px;
+}
+
+.warning-message ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #dcddde;
+}
+
+.warning-message li {
+    margin-bottom: 8px;
+}
+
+.warning-message li:last-child {
+    margin-bottom: 0;
+}
+
+/* 폼 스타일 */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    color: #b9bbbe;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.input-field {
+    background-color: #40444b;
+    border: 1px solid #202225;
+    border-radius: 4px;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #5865f2;
+}
+
+.error-message {
+    color: #ed4245;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* 버튼 스타일 */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.cancel-button, .delete-button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+.cancel-button {
+    background-color: #4f545c;
+}
+
+.delete-button {
+    background-color: #ed4245;
+}
+
+.cancel-button:hover {
+    background-color: #5d6269;
+}
+
+.delete-button:hover {
+    background-color: #c03537;
+}
+
+/* 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #36393f;
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.modal-content h3 {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+}
+
+.modal-content p {
+    margin: 0 0 24px 0;
+    color: #dcddde;
+    line-height: 1.5;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
