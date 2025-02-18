@@ -119,20 +119,15 @@ fileInput.addEventListener('change', function(e) {
     }
 });
 
-// 비밀번호 변경 버튼 처리
-document.querySelector('.change-password-button').addEventListener('click', function() {
-        window.location.href = 'password_change.html'; // 메인 페이지로 이동
-});
-
 // 계정 탈퇴 버튼 처리
 document.querySelector('.delete-account-button').addEventListener('click', function() {
-    window.location.href = 'delete_account.html'; // 메인 페이지로 이동
+    window.location.href = 'delete_account.html';
 });
 
 // 취소 버튼 처리
 document.querySelector('.cancel-button').addEventListener('click', function() {
     if (confirm('변경사항을 취소하시겠습니까?')) {
-        window.location.href = 'main.html'; // 메인 페이지로 이동
+        window.location.href = 'main.html';
     }
 });
 
