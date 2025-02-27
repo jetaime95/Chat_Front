@@ -141,7 +141,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 friendElement = `
                     <div class="friend-item">
                         <div class="${friend.is_online ? 'online-indicator' : 'offline-indicator'}"></div>
-                        <div class="friend-avatar"></div>
+                        <div class="friend-avatar">
+                            <img class="friend-avatar-image" 
+                                 src="${backend_base_url}${friend.image}"
+                                 data-user-id="${friend.id}">
+                        </div>
                         <div class="friend-info">
                             <div class="friend-name">${friend.username}</div>
                             <div class="friend-status">${getFriendStatus(friend)}</div>
@@ -365,6 +369,11 @@ document.addEventListener('DOMContentLoaded', function() {
             userElement.className = 'search-result-item';
             userElement.innerHTML = `
                 <div class="user-info">
+                    <div class="user-avatar">
+                        <img class="user-avatar-image" 
+                             src="${user.profile_image ? backend_base_url + user.profile_image : '/default.png'}"
+                             data-user-id="${user.id}">
+                    </div>
                     <div class="user-name">${user.username}</div>
                     <div style="color: #8e9297; font-size: 12px;">${user.is_online ? '온라인' : '오프라인'}</div>
                 </div>
@@ -447,6 +456,14 @@ function initializeWebSocket() {
                     newIndicator.className = friend.is_online ? 'online-indicator' : 'offline-indicator';
                     // 새로운 인디케이터를 friend-item 안에 추가
                     item.prepend(newIndicator); // .friend-item 맨 앞에 추가
+                    
+                    // 프로필 이미지가 업데이트되었으면 이미지도 업데이트
+                    if (friend.profile_image_url) {
+                        const avatarImage = item.querySelector('.friend-avatar-image');
+                        if (avatarImage) {
+                            avatarImage.src = backend_base_url + friend.profile_image_url;
+                        }
+                    }
                 }
             });
         }
