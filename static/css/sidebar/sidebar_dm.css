@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 메인 네비게이션 */
+.main-nav {
+    width: 72px;
+    background-color: #202225;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #36393f;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8e9297;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+.nav-icon:hover {
+    background-color: #5865f2;
+    color: #ffffff;
+}
+
+.nav-icon.active {
+    background-color: #5865f2;
+    color: #ffffff;
+}
+
+/* 사이드바 */
+.friends-sidebar {
+    width: 240px;
+    background-color: #2f3136;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 프로필을 하단에 위치시키기 위해 추가 */
+}
+
+.friends-header {
+    padding: 13px;
+    border-bottom: 1px solid #404249;
+}
+
+/* 친구 목록의 드롭다운 스타일 */
+.friend-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.friend-dropdown-toggle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #40444b;
+    border: none;
+    color: #b9bbbe;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.friend-dropdown-toggle:hover {
+    background-color: #5865f2;
+    color: #ffffff;
+}
+
+.friend-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #18191c;
+    min-width: 120px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.friend-dropdown-content.show {
+    display: block;
+}
+
+.friend-dropdown-item {
+    width: 100%;
+    padding: 10px 16px;
+    color: #dcddde;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.friend-dropdown-item:hover {
+    background-color: #5865f2;
+    color: white;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 프로필 섹션 스타일 */
+.profile-section {
+    background-color: #292b2f;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.profile-status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #3ba55c;
+    border: 2px solid #292b2f;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    z-index: 1;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 0; /* 텍스트 오버플로우 방지 */
+}
+
+.profile-name {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-tag {
+    color: #b9bbbe;
+    font-size: 12px;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.profile-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: none;
+    color: #b9bbbe;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.profile-button:hover {
+    background-color: #36393f;
+    color: #dcddde;
+}
+
+/* 프로필 드롭다운 스타일 */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    background-color: #18191c;
+    min-width: 150px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    margin-bottom: 5px;
+}
+
+.profile-dropdown-content.show {
+    display: block;
+}
+
+.profile-dropdown-item {
+    width: 100%;
+    padding: 10px 16px;
+    color: #dcddde;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile-dropdown-item:hover {
+    background-color: #5865f2;
+    color: white;
+}
+
+/* 메시지 버튼 스타일 */
+.message-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #40444b;
+    border: none;
+    color: #b9bbbe;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.message-button:hover {
+    background-color: #5865f2;
+    color: #ffffff;
+}
+
+/* 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+    background-color: #36393f;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    color: #ffffff;
+}
+
+/* 로그아웃 모달 */
+.close-button {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.modal-button {
+    position: absolute;
+    bottom: 10px; 
+    right: 20px; 
+    background-color: #ed4245; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+/* 확인 버튼 스타일 */
+#confirmLogout {
+    background-color: #F04747;
+    color: white;
+}
+
+#confirmLogout:hover {
+    background-color: #D43838;
+}
+
+/* 구분선 스타일 */
+.server-separator {
+    width: 32px;
+    height: 2px;
+    background-color: #36393f;
+    margin: 8px 0;
+}
+
+/* 서버 목록 스타일 */
+.server-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+    padding: 0 12px;
+}
+
+.server-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #36393f;
+    border-radius: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8e9297;
+    font-size: 20px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.server-icon:hover {
+    background-color: #5865f2;
+    color: #ffffff;
+    border-radius: 16px;
+}
+
+.add-server {
+    background-color: #36393f;
+    color: #3ba55c;
+    font-size: 24px;
+}
+
+.add-server:hover {
+    background-color: #3ba55c;
+    color: #ffffff;
+}
+
+/* 읽지 않은 메시지 배지 스타일 */
+.server-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #ed4245;
+    color: white;
+    font-size: 12px;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    font-weight: bold;
+    border: 3px solid #202225;
+}
+
+.accept-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #40444b;
+    border: none;
+    color: #b9bbbe;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.accept-button:hover {
+    background-color: #3ba55c;
+    color: #ffffff;
+}
+
+.reject-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #40444b;
+    border: none;
+    color: #b9bbbe;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.reject-button:hover {
+    background-color: #c72c3b;
+    color: #ffffff;
+}
