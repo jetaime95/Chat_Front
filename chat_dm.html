@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Service - Messages</title>
+    <link rel="stylesheet" href="./static/css/sidebar/sidebar_dm.css">
+    <link rel="stylesheet" href="./static/css/chat/chat_dm.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 메인 네비게이션 -->
+        <div class="main-nav">
+            <div class="nav-icon" id="home-icon">🏠</div>
+            <div class="nav-icon" id="notification-icon">🔔</div>
+            <div class="server-separator"></div>
+            <!-- 그룹채팅방 목록 -->
+            <div class="server-list">
+                <div class="server-icon">
+                    👥
+                    <div class="server-badge">3</div>
+                </div>
+                <div class="server-icon">
+                    👥
+                    <div class="server-badge">15</div>
+                </div>
+                <div class="server-icon">
+                    👥
+                    <div class="server-badge">7</div>
+                </div>
+                <div class="server-icon add-server">+</div>
+            </div>
+        </div>
+
+        <!-- 사이드바 -->
+        <div class="friends-sidebar">
+            <div class="friends-header">
+                <div class="section-title">chat</div>
+            </div>
+            <!-- 채팅 목록 영역 추가 -->
+            <div class="chat-list-container">
+                <div class="chat-list-header">
+                    <span>다이렉트 메시지 <span class="dm-count"></span></span>
+                </div>
+                <div class="chat-list"></div>
+            </div>
+
+             <!-- 프로필 섹션 -->
+             <div class="profile-section">
+                <div class="profile-avatar">
+                    <img class="profile-image">
+                    <div class="profile-status"></div>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-name"></div>
+                    <div class="profile-tag">온라인</div>
+                </div>
+                <div class="profile-actions">
+                    <div class="profile-dropdown">
+                        <button class="profile-button">⚙️</button>
+                        <div class="profile-dropdown-content">
+                            <button class="profile-dropdown-item" id="editProfileButton">프로필 수정</button>
+                            <button class="profile-dropdown-item" id="logoutButton">로그아웃</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-main">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-header-avatar">
+                    </div>
+                    <div class="chat-header-name"></div>
+                </div>
+            </div>
+
+            <div class="chat-content">
+                <div class="chat-messages" id="chat-messages"></div>
+            </div>
+
+            <!-- 로그아웃 모달 -->
+            <div id="logoutModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" id="closeLogoutModal">&times;</span>
+                    <h2>로그아웃</h2>
+                    <h4>정말로 로그아웃하시겠어요?</h4>
+                    <button class="modal-button" id="confirmLogout">로그아웃</button>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="chat-input-container">
+                    <textarea class="chat-input" id="message-input" placeholder="메시지 보내기" rows="1"></textarea>
+                    <button id="send-button">전송</button>
+                    <div id="typing-indicator" style="display:none; font-style: italic;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./static/js/chat/chat_dm.js"></script>
+    <script src="./static/js/sidebar/sidebar_dm.js"></script>
+</body>
+</html>
