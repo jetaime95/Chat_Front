@@ -136,37 +136,11 @@ font-size: 12px;
     flex-direction: column;
 }
 
-/* 검색 헤더 */
-.search-header {
-    height: 48px;
-    background-color: #36393f;
-    border-bottom: 1px solid #202225;
-    padding: 0 16px;
-    display: flex;
-    align-items: center;
-}
-
-.search-bar {
-    flex: 1;
-    max-width: 600px;
-    height: 32px;
-    background-color: #202225;
-    border: none;
-    border-radius: 4px;
-    padding: 0 12px;
-    color: #ffffff;
-    font-size: 14px;
-}
-
-.search-bar::placeholder {
-    color: #72767d;
-}
-
 /* 친구 목록 메인 영역 */
 .friends-area {
     flex: 1;
     background-color: #36393f;
-    padding: 20px;
+    padding: 10px;
 }
 
 .friends-tabs {

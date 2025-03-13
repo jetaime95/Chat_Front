@@ -61,7 +61,7 @@ body {
 }
 
 .friends-header {
-    padding: 13px;
+    padding: 18px;
     border-bottom: 1px solid #404249;
 }
 
@@ -122,14 +122,14 @@ body {
 }
 
 .section-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 /* 프로필 섹션 스타일 */
 .profile-section {
     background-color: #292b2f;
-    padding: 8px;
+    padding: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
