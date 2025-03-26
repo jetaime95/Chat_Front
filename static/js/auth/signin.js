@@ -1,4 +1,4 @@
-const backend_base_url = "http://backend:8000"
+const backend_base_url = "http://13.209.15.78:8000"
 
 document.getElementById('loginForm').addEventListener('submit', async function (e) {
     e.preventDefault(); // 기본 동작 방지

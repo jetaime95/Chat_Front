@@ -1,4 +1,4 @@
-const backend_base_url = "http://backend:8000";
+const backend_base_url = "http://13.209.15.78:8000";
 
 const urlParams = new URLSearchParams(window.location.search);
 const roomId = urlParams.get('room_id');
