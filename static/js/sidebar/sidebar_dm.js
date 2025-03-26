@@ -124,7 +124,7 @@ function generateChatListHTML(rooms) {
 
 function initializeDmSocket() {
     const token = localStorage.getItem('access');
-    const dmSocket = new WebSocket(`ws://127.0.0.1:8000/ws/chat/sidebar/?token=${token}`);
+    const dmSocket = new WebSocket(`ws://13.209.15.78:8000/ws/chat/sidebar/?token=${token}`);
 
     dmSocket.onopen = function() {
         console.log('WebSocket 연결 성공');
