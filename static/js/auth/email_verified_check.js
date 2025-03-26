@@ -1,4 +1,4 @@
-const backend_base_url = "http://127.0.0.1:8000"
+const backend_base_url = "http://backend:8000"
 
 // 전역 타이머 변수 추가
 let currentTimer = null;
