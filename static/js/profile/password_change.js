@@ -1,4 +1,4 @@
-const backend_base_url = "https://13.209.15.78:8000/api";
+const backend_base_url = "https://13.209.15.78:8000";
 
 document.addEventListener('DOMContentLoaded', function() {
     checkLoginStatus();
