@@ -1,4 +1,4 @@
-const backend_base_url = "https://13.209.15.78:8000"
+const backend_base_url = "https://${window.location.host}/api"
 
 let onlineUsers = new Set();
 
@@ -421,7 +421,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeWebSocket() {
     accessToken = localStorage.getItem('access');
     token = accessToken.replace('Bearer ', '');
-    chatSocket = new WebSocket(`wss://13.209.15.78:8000/wss/user/status/?token=${token}`);
+    chatSocket = new WebSocket(`wss://${window.location.host}/ws/user/status/?token=${token}`);
 
     chatSocket.onopen = function() {
         console.log('WebSocket 연결 성공');

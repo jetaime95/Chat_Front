@@ -1,4 +1,4 @@
-const backend_base_url = "https://13.209.15.78:8000"
+const backend_base_url = "https://${window.location.host}/api"
 
 document.addEventListener('DOMContentLoaded', function() {
     const emailInput = document.getElementById('emailInput');

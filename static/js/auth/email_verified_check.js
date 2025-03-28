@@ -1,4 +1,4 @@
-const backend_base_url = "https://13.209.15.78:8000"
+const backend_base_url = "https://${window.location.host}/api"
 
 // 전역 타이머 변수 추가
 let currentTimer = null;

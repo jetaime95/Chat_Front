@@ -1,4 +1,4 @@
-const backend_base_url = "https://13.209.15.78:8000"
+const backend_base_url = "https://${window.location.host}/api"
 
 // 저장된 이메일을 가져오는 함수 추가
 function getEmailWithExpiry() {

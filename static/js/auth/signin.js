@@ -1,4 +1,4 @@
-const backend_base_url = "https://13.209.15.78:8000"
+const backend_base_url = "https://${window.location.host}/api"
 
 document.getElementById('loginForm').addEventListener('submit', async function (e) {
     e.preventDefault(); // 기본 동작 방지

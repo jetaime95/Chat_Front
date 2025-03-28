@@ -1,4 +1,4 @@
-const backend_base_url = "https://13.209.15.78:8000";
+const backend_base_url = "https://${window.location.host}/api";
 
 const urlParams = new URLSearchParams(window.location.search);
 const roomId = urlParams.get('room_id');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function initializeWebSocket(roomId) {
-    chatSocket = new WebSocket(`wss://13.209.15.78:8000/wss/chat/${roomId}/?token=${token}`);
+    chatSocket = new WebSocket(`wss://${window.location.host}/ws/chat/${roomId}/?token=${token}`);
 
     chatSocket.onopen = function() {
         console.log('WebSocket 연결 성공');
