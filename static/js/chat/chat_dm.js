@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function initializeWebSocket(roomId) {
-    chatSocket = new WebSocket(`wss://13.209.15.78:8000/ws/chat/${roomId}/?token=${token}`);
+    chatSocket = new WebSocket(`wss://13.209.15.78/ws/chat/${roomId}/?token=${token}`);
 
     chatSocket.onopen = function() {
         console.log('WebSocket 연결 성공');
